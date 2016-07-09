@@ -1,0 +1,30 @@
+@mixin bgImg(
+  $image,
+  $direction: to bottom,
+  $opacitySt: 0,
+  $opacityEnd: 0,
+  $bgPos: center center
+  ) {
+  background: linear-gradient(
+    $direction,
+    rgba(0,0,0, $opacitySt),
+    rgba(0,0,0, $opacityEnd)
+  ),url($image);
+  background-repeat: no-repeat;
+  background-position: $bgPos; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}//backImg
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  } //before, after
+  &:after {
+    clear: both;
+  } //after
+} //clearfix

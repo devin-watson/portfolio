@@ -1,0 +1,16 @@
+header #main-nav {
+	@include clearfix;
+	z-index: 100;
+
+	.navbar{
+		@include container;
+		ul{
+			li{
+				a{
+					display: inline-block;
+					text-decoration: none;
+				}//a
+			}//li
+		}//ul
+	}//navbar
+}//header #main-nav
