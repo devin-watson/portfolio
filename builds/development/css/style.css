@@ -1,5 +1,5 @@
-@charset "UTF-8";
 @import "https://fonts.googleapis.com/css?family=Copse|Open+Sans:300,400,700";
+@import "https://fonts.googleapis.com/css?family=Rubik+One";
 /* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -65,58 +65,412 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 21, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* line 1, ../../../components/sass/_base.scss */
 body {
-  font: 200 1.2em/1.2em "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  color: #FFFFFF;
+  background-color: #262626;
 }
 
-/* line 3, ../../../components/sass/modules/_intro.scss */
-header .intro #intro_image {
-  height: 450px;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/profile.jpg");
-  background-repeat: no-repeat;
-  background-position: 65% center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
+/* line 8, ../../../components/sass/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Copse, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 2em;
+  line-height: 1.1em;
 }
 
-/* line 1, ../../../components/sass/modules/_nav.scss */
-header #main-nav  {
-  z-index: 100;
+/* line 16, ../../../components/sass/_base.scss */
+p {
+  font-size: 1.3em;
+  line-height: 1.2em;
+  text-align: justify;
 }
-/* line 22, ../../../components/sass/_mixins.scss */
-header #main-nav :before, header #main-nav :after {
-  content: '';
-  display: table;
+
+/* line 1, ../../../components/sass/_layout.scss */
+body {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
-/* line 27, ../../../components/sass/_mixins.scss */
-header #main-nav :after {
-  clear: both;
+
+/* line 7, ../../../components/sass/_layout.scss */
+.page {
+  position: relative;
+  padding-top: 0;
 }
-/* line 5, ../../../components/sass/modules/_nav.scss */
-header #main-nav  .navbar {
-  max-width: 100%;
+/* line 11, ../../../components/sass/_layout.scss */
+.page article {
+  max-width: 85%;
   margin-left: auto;
   margin-right: auto;
 }
 /* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
-header #main-nav  .navbar:after {
+.page article:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 9, ../../../components/sass/modules/_nav.scss */
-header #main-nav  .navbar ul li a {
-  display: inline-block;
+@media (min-width: 1200px) {
+  /* line 7, ../../../components/sass/_layout.scss */
+  .page {
+    padding: 0;
+  }
+}
+@media (min-width: 960px) {
+  /* line 20, ../../../components/sass/_layout.scss */
+  .page article {
+    max-width: 60em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .page article:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+/* line 1, ../../../components/sass/modules/_intro.scss */
+#entrance {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* line 22, ../../../components/sass/_mixins.scss */
+#entrance:before, #entrance:after {
+  content: '';
+  display: table;
+}
+/* line 27, ../../../components/sass/_mixins.scss */
+#entrance:after {
+  clear: both;
+}
+/* line 6, ../../../components/sass/modules/_intro.scss */
+#entrance .social {
+  list-style: none;
+  display: table;
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+/* line 12, ../../../components/sass/modules/_intro.scss */
+#entrance .social li {
+  display: table-cell;
+  padding: 0 8px;
+  cursor: pointer;
+}
+/* line 16, ../../../components/sass/modules/_intro.scss */
+#entrance .social li img {
+  opacity: .7;
+  width: 40px;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+/* line 20, ../../../components/sass/modules/_intro.scss */
+#entrance .social li img:hover {
+  -moz-transform: scale(1.3, 1.3);
+  -ms-transform: scale(1.3, 1.3);
+  -webkit-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  opacity: 1;
+}
+/* line 28, ../../../components/sass/modules/_intro.scss */
+#entrance .text-group {
+  padding: 0;
+  position: relative;
+  bottom: 30px;
+  z-index: 0;
+  text-align: left;
+}
+/* line 34, ../../../components/sass/modules/_intro.scss */
+#entrance .text-group li {
+  display: block;
+  padding: 0;
+}
+/* line 37, ../../../components/sass/modules/_intro.scss */
+#entrance .text-group li h1 {
+  font-family: Copse, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 2em;
+  line-height: 1em;
+  text-align: left;
+  color: #FFFFFF;
+  padding: 15px;
+  text-transform: lowercase;
+}
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 37, ../../../components/sass/modules/_intro.scss */
+  #entrance .text-group li h1 {
+    font-size: 1.6em;
+  }
+}
+/* line 49, ../../../components/sass/modules/_intro.scss */
+#entrance .text-group li p {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 2em;
+  text-align: left;
+  margin: 15px 0 0 0;
+  padding: 15px;
+  color: #FFFFFF;
+  text-transform: lowercase;
+}
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 49, ../../../components/sass/modules/_intro.scss */
+  #entrance .text-group li p {
+    font-size: 1.5em;
+  }
+}
+/* line 62, ../../../components/sass/modules/_intro.scss */
+#entrance .text-group li #handwriting {
+  padding: 0;
+  margin-bottom: -100px;
+  overflow: hidden;
+}
+/* line 67, ../../../components/sass/modules/_intro.scss */
+#entrance .text-group li #arrow {
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+/* line 1, ../../../components/sass/modules/_nav.scss */
+.toggle {
   text-decoration: none;
+  position: fixed;
+  top: 40px;
+  left: 50px;
+  z-index: 1;
+  opacity: 1;
+  color: #FFFFFF;
+  background-color: #262626;
+  padding: 4px 7px;
+  border-radius: 10px;
+  visibility: visible;
+  cursor: pointer;
+  -moz-transition: opacity 0s linear, visibility 0s linear 510ms;
+  -o-transition: opacity 0s linear, visibility 0s linear 510ms;
+  -webkit-transition: opacity 0s linear, visibility 0s linear;
+  -webkit-transition-delay: 0s, 510ms;
+  transition: opacity 0s linear, visibility 0s linear 510ms;
+}
+
+/* line 19, ../../../components/sass/modules/_nav.scss */
+.toggleX {
+  visibility: hidden;
+  opacity: 0;
+  -moz-transition: opacity 500ms linear, visibility 0s linear;
+  -o-transition: opacity 500ms linear, visibility 0s linear;
+  -webkit-transition: opacity 500ms linear, visibility 0s linear;
+  transition: opacity 500ms linear, visibility 0s linear;
+}
+
+/* line 28, ../../../components/sass/modules/_nav.scss */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -300px;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  width: 300px;
+  padding: 30px 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 0;
+}
+/* line 39, ../../../components/sass/modules/_nav.scss */
+.sidebar .navigation {
+  list-style: none;
+  margin: 70px 0 0 0;
+  padding: 0;
+}
+/* line 43, ../../../components/sass/modules/_nav.scss */
+.sidebar .navigation li {
+  margin-bottom: 8px;
+  padding: 0;
+  display: block;
+}
+/* line 47, ../../../components/sass/modules/_nav.scss */
+.sidebar .navigation li a {
+  width: 100%;
+  color: #000000;
+  font-family: "Rubik One", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.4em;
+  font-weight: 200;
+  line-height: 1.2em;
+  text-decoration: none;
+  display: block;
+  padding: 20px 0;
+}
+/* line 58, ../../../components/sass/modules/_nav.scss */
+.sidebar .navigation li a:hover {
+  color: #FFFFFF;
+  background-color: #B60059;
+  border-radius: 20px;
+}
+/* line 66, ../../../components/sass/modules/_nav.scss */
+.sidebar .social {
+  list-style: none;
+  display: table;
+  margin-left: 30px;
+  position: fixed;
+  bottom: 40px;
+}
+/* line 72, ../../../components/sass/modules/_nav.scss */
+.sidebar .social li {
+  display: table-cell;
+  padding: 0 10px;
+  cursor: pointer;
+  text-align: center;
+}
+/* line 77, ../../../components/sass/modules/_nav.scss */
+.sidebar .social li img {
+  width: 40px;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  opacity: .7;
+}
+/* line 82, ../../../components/sass/modules/_nav.scss */
+.sidebar .social li img:hover {
+  -moz-transform: scale(1.3, 1.3);
+  -ms-transform: scale(1.3, 1.3);
+  -webkit-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  opacity: 1;
+}
+
+/* line 94, ../../../components/sass/modules/_nav.scss */
+#sidebartoggler {
+  display: none;
+}
+
+/* line 99, ../../../components/sass/modules/_nav.scss */
+#sidebartoggler:checked + .wrapper .sidebar {
+  left: 0px;
+}
+/* line 103, ../../../components/sass/modules/_nav.scss */
+#sidebartoggler:checked + .wrapper .toggle {
+  visibility: hidden;
+  opacity: 0;
+  -moz-transition: opacity 0s linear, visibility 0s linear 1s;
+  -o-transition: opacity 0s linear, visibility 0s linear 1s;
+  -webkit-transition: opacity 0s linear, visibility 0s linear;
+  -webkit-transition-delay: 0s, 1s;
+  transition: opacity 0s linear, visibility 0s linear 1s;
+}
+/* line 112, ../../../components/sass/modules/_nav.scss */
+#sidebartoggler:checked + .wrapper .toggleX {
+  visibility: visible;
+  opacity: 1;
+  font-family: "Rubik One", "Helvetica Neue", Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 2em;
+  color: #000000;
+  position: fixed;
+  top: 40px;
+  left: 230px;
+  z-index: 1;
+  cursor: pointer;
+  -moz-transition: opacity 500ms linear, visibility 0s linear 500ms, -moz-transform 0.3s;
+  -o-transition: opacity 500ms linear, visibility 0s linear 500ms, -o-transform 0.3s;
+  -webkit-transition: opacity 500ms linear, visibility 0s linear, -webkit-transform 0.3s;
+  -webkit-transition-delay: 0s, 500ms, 0s;
+  transition: opacity 500ms linear, visibility 0s linear 500ms, transform 0.3s;
+}
+/* line 129, ../../../components/sass/modules/_nav.scss */
+#sidebartoggler:checked + .wrapper .toggleX:hover {
+  -moz-transform: scale(1.3, 1.3);
+  -ms-transform: scale(1.3, 1.3);
+  -webkit-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  color: #B60059;
+  -moz-transition: -moz-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+/* line 1, ../../../components/sass/modules/_about.scss */
+#about {
+  background-color: #FFFFFF;
+}
+/* line 3, ../../../components/sass/modules/_about.scss */
+#about .divider {
+  margin: 0 auto;
+  padding: 0;
+  height: 50px;
+  background-image: url("../images/hexagonal_pattern.png");
+  background-size: 20%;
+  background-repeat: repeat-x;
+}
+/* line 13, ../../../components/sass/modules/_about.scss */
+#about .content .about-intro h2 {
+  padding: 50px 0 20px 0;
+  text-align: center;
+  color: #B60059;
+}
+/* line 18, ../../../components/sass/modules/_about.scss */
+#about .content .about-intro p {
+  padding: 20px 0;
+  text-align: center;
+  color: #292D36;
+}
+/* line 24, ../../../components/sass/modules/_about.scss */
+#about .content .interests {
+  padding-left: 9.16667%;
+  padding-right: 9.16667%;
+}
+/* line 26, ../../../components/sass/modules/_about.scss */
+#about .content .interests h4 {
+  padding: 30px 0;
+  color: #354F66;
+  text-shadow: #000000 0 0 0.5px;
+  text-align: center;
+}
+/* line 32, ../../../components/sass/modules/_about.scss */
+#about .content .interests ul {
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  display: block;
+}
+/* line 37, ../../../components/sass/modules/_about.scss */
+#about .content .interests ul li {
+  color: #292D36;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.2em;
+  padding: 10px 0;
+  margin: 5px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

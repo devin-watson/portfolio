@@ -1,3 +1,20 @@
 body{
-	font: $bodyFont;
+	font-family: $bodyFont;
+	color: $white;
+	background-color: lighten($black, 15);
+
+}
+
+#{headings()} {
+ font-family: $headFont;
+ font-weight: 400;
+ color: $white;
+ font-size: 2em;
+ line-height: 1.1em; 
+}
+
+p{
+	font-size: 1.3em;
+	line-height: 1.2em;
+	text-align: justify;
 }

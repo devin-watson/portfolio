@@ -1,12 +1,73 @@
-header{
-	.intro{
-		#intro_image{
-			height: 450px;
-			@include bgImg("../images/profile.jpg", to left, 0, 0, 65% center);
-			@include display-flex();
-			@include justify-content(center);
-			@include align-items(center);
-		}
+#entrance{
+	@include clearfix;
+	@include display-flex();
+    @include align-items(center);
+    @include justify-content(center);
+    .social{
+    	list-style: none;
+	  	display: table;
+	  	position: absolute;
+	  	top: 50px;
+	  	right: 0;
+    	li{
+  		display: table-cell;
+  		padding: 0 8px;
+  		cursor: pointer;
+  		img{
+  			opacity: .7;
+  			width: 40px;
+  			@include transition(all 0.8s);
+  			&:hover{
+  				@include scale(1.3);
+  				@include transition(all 0.8s);
+  				opacity: 1;
+  			}
+  		}//img
+  	}//li
+    }
+	.text-group{
+		padding: 0;
+		position: relative;
+		bottom: 30px;
+		z-index: 0;
+		text-align: left;
+		li{
+			display: block;
+			padding: 0;
+			h1 {
+		       	font-family: $headFont;
+		       	font-size: 2em;
+		       	line-height: 1em;
+		       	text-align: left;
+		       	color: $white;
+		       	padding: 15px;
+		       	text-transform: lowercase;
+		       	@include breakpoint($small 0) {
+		       		font-size: 1.6em;
+		       }//breakpoint
+	      	} //h1
+		    p {
+		    	font-family: $bodyFont;
+		    	font-size: 2em;
+		        text-align: left;
+		        margin: 15px 0 0 0;
+		        padding: 15px;
+		        color: $white;
+		        text-transform: lowercase;
+		        @include breakpoint($small 0) {
+		       		font-size: 1.5em;
+		       }//breakpoint
+	   		}//p
 
-	}
-}
+	   		#handwriting{
+	   			padding: 0;
+	   			margin-bottom: -100px;
+	   			overflow: hidden;
+	   		}
+	   		#arrow{
+	   			padding: 0;
+	   			margin-bottom: 15px;
+	   		}
+		}//li
+	}//text-group
+}//entrance

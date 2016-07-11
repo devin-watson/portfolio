@@ -1,8 +1,18 @@
 //Fonts
 @import 'https://fonts.googleapis.com/css?family=Copse|Open+Sans:300,400,700';
+@import 'https://fonts.googleapis.com/css?family=Rubik+One';
+@include border-box-sizing; 
 
-$headFont: 200 1.5em/1.5em Copse, "Helvetica Neue", Helvetica, sans-serif;
-$bodyFont: 200 1.2em/1.2em "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+$susy: (
+  columns: 12,
+  container: 60em,
+  gutters: .25,
+  gutter-position: inside
+);
+
+$headFont: Copse, "Helvetica Neue", Helvetica, sans-serif;
+$bodyFont: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+$navFont: "Rubik One", "Helvetica Neue", Helvetica, sans-serif;
 
 //Colors
 
@@ -13,6 +23,15 @@ $blue: #354F66;
 $darkBlue: #292D36;
 $black: #000000;
 $white: #FFFFFF;
+$pink: #B60059;
+$green: #4F9C27;
 
 $bgColor: $yellow;
 $defColor: $white;
+
+
+$tiny: 400px;
+$small: 650px;
+$medium: 960px;
+$large: 1200px;
+

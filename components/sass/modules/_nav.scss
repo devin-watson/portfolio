@@ -1,16 +1,141 @@
-header #main-nav {
-	@include clearfix;
-	z-index: 100;
+.toggle {
+  text-decoration: none;
+  position: fixed;
+  top: 40px;
+  left: 50px;
+  z-index: 1;
+  opacity: 1;
+  color: $white;
+  background-color: lighten($black, 15);
+  padding: 4px 7px;
+  border-radius: 10px;
+  visibility: visible;
+  cursor: pointer;
+  @include transition(
+    opacity 0s linear,
+    visibility 0s linear 510ms
+  );
+}
+.toggleX{
+	visibility: hidden;
+	opacity: 0;
+	@include transition(
+    opacity 500ms linear,
+    visibility 0s linear
+  );
+}
 
-	.navbar{
-		@include container;
-		ul{
-			li{
-				a{
-					display: inline-block;
-					text-decoration: none;
-				}//a
-			}//li
-		}//ul
-	}//navbar
-}//header #main-nav
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -300px;
+  @include transition();
+  width: 300px;
+  padding: 30px 0;
+  background: rgba(255, 255, 255, .9);
+  z-index: 0;
+  .navigation{
+  	list-style: none;
+  	margin: 70px 0 0 0;
+  	padding: 0;
+  	li{
+	  margin-bottom: 8px;
+	  padding: 0;
+	  display: block;
+    a{
+      width: 100%;
+      color: $black;
+      font-family: $navFont;
+      font-size: 1.4em;
+      font-weight: 200;
+      line-height: 1.2em;
+      text-decoration: none;
+      display: block;
+      padding: 20px 0;
+      
+      &:hover{
+      color: $white;
+      background-color: $pink;
+      border-radius: 20px;
+    }
+    }//a
+  	}//li
+  }//ul
+  .social{
+  	list-style: none;
+  	display: table;
+  	margin-left: 30px;
+  	position: fixed;
+  	bottom: 40px;
+    	li{
+  		display: table-cell;
+  		padding: 0 10px;
+  		cursor: pointer;
+      text-align: center;
+  		img{
+  			width: 40px;
+  			@include transition(all 0.8s);
+        opacity: .7;
+
+  			&:hover{
+  				@include scale(1.3);
+  				@include transition(all 0.8s);
+          opacity: 1;
+  			}
+  		}//img
+  	}//li
+  }//social
+ 
+
+}//sidebar
+
+#sidebartoggler {
+  display: none;
+}
+
+ #sidebartoggler:checked + .wrapper {
+ 	.sidebar {
+    	left: 0px; 
+      
+	}
+	.toggle{
+		//left:380px;
+		visibility: hidden;
+    opacity: 0;
+    @include transition(
+    opacity 0s linear,
+    visibility 0s linear 1s
+  );
+	}
+	.toggleX{
+		visibility: visible;
+		opacity: 1;
+    font-family: $navFont;
+		text-decoration: none;
+		font-size: 2em;
+		color: $black;
+		position: fixed;
+		top: 40px;
+		left: 230px;
+		z-index: 1;
+		cursor: pointer;
+		@include transition(
+    	opacity 500ms linear,
+    	visibility 0s linear 500ms,
+    	transform 0.3s
+  		);
+		&:hover{
+			@include scale(1.3);
+      @include transform(rotate(180deg));
+		  color: $pink;
+		  @include transition(transform 0.3s);
+		}
+	}//toggleX
+	//.content{
+		//padding-left:360px;
+	//}
+}
+
+

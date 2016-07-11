@@ -1,0 +1,47 @@
+#about{
+	background-color: $white;
+	.divider{
+			margin: 0 auto;
+			padding: 0;
+			height: 50px;
+			background-image: url("../images/hexagonal_pattern.png");
+			background-size: 20%;
+			background-repeat: repeat-x;
+	}
+	.content{
+		.about-intro{
+			h2{
+				padding: 50px 0 20px 0;
+				text-align: center;
+				color: $pink;
+			}
+			p{
+				padding: 20px 0;
+				text-align: center;
+				color: $darkBlue;
+			}
+		}//.content
+	.interests{
+		@include pad(1,1);
+		h4{
+			padding: 30px 0;
+			color: $blue;
+			@include text-shadow($black 0 0 .5px);
+			text-align: center;
+		}
+		ul{
+			text-decoration: none;
+			list-style: none;
+			text-align: center;
+			display: block;
+			li{
+				color: $darkBlue;
+				font-family: $bodyFont;
+				font-size: 1.2em;
+				padding: 10px 0;
+				margin: 5px 0;
+			}
+		}
+	}
+	}
+}

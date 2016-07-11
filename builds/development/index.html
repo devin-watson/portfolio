@@ -6,98 +6,137 @@
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-<header>
-  <nav id="main-nav">
-    <div class="navbar">
-      <ul>
-        <li><a href="#">Things I Like</a></li>
-        <li><a href="#">What I've Done</a></li>
-        <li><a href="#">Things I Know</a></li>
-        <li><a href="#">Contact Me</a></li>
+<input type="checkbox" id="sidebartoggler" name="" value="" />
+
+<div class="wrapper">
+  <label for="sidebartoggler" class="toggle"><img src="../images/menu.png" width="30"></label>
+  <label for="sidebartoggler" class="toggleX">X</label>
+<!--Place all webpage content into .page-content class-->
+  <div class="content">
+    <section id="entrance" class="page full-height">
+      <ul class="social">
+        <li><img src="../images/github-logo-white.png"><li>
+        <li><img src="../images/linkedin-logo-white.png"><li>
+        <li><img src="../images/codepen-white.png"><li>
       </ul>
-    </div>
-  </nav>
-  <article class="intro">
-    <div id="intro_image">
-    </div>
-    <h1></h1>
-  </article>
-</header>
-<section id="about">
-  <article class="content">
-    <h2>Things I Like</h2>
-      <p>Hi there. I am a front-end developer and a translator. Working as a translator for 5 years, I had chance to get to know many industries including web technologies. First I had a little research about it to satisfy my curiosity, next thing I know I decided to become a web developer. Since then I've been studying intensively while doing freelance projects.</p>
-    <h4>Here are few things I do other than coding and translating:</h4>
-    <ol>
-      <li>Making electronic music</li>
-      <li>Playing the guitar</li>
-      <li>Juggling</li>
-      <li>Drawing</li>
-      <li>Doing yoga</li>
-    </ol>
-  </article>
-</section>
-<section id="previous-work">
-  <h2>What I've Done So Far</h2>
-    <p>I always apply what I learn to the next project. I often get lost in blogs and nice websites' source codes trying to improve my style and discover new ideas. In all of my projects I give a special care to organization and planning. Here you can see what I've done so far:</p>
-    <div class="container">
-      <h3>Reflections on the Bay</h3>
-        <img src="#" alt="reflectionsonthebay.com">
-        <p>Customer needed a website which they can customize all they want. They already had an idea about what they want on their webiste and how it should be presented. I used Bootstrap framework to create this nice and simple single-page design.</p>
-    </div>
-    <div class="container">
-      <h3>My Portfolio</h3>
-        <img src="#" alt="devin-watson.com">
-        <p>I designed my portfolio with few different options in Adobe Illustrator CC 2015. I especially focused on responsiveness of the website. I used technologies including Git, SASS, Gulp which allowed me to be very organized and effective.</p>
-    </div>
-    <div class="container">
-      <h3>Pipe Clay Cottage</h3>
-        <img src="#" alt="pipeclaycottage.com">
-        <p>In this project, customer wasn't really sure what they wanted and the timeline was short. Therefore I customized a template they liked using HTML, CSS, XML and Google Maps API.</p>
-    </div>
-</section>
-<section id="skills">
-  <h2>Things I Know</h2>
-    <h3>Languages, Frameworks, Libraries and Technologies</h3>
-      <div class="full-height">
-        <ul>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>Javascript</li>
-          <li>JQuery</li>
-          <li>Bootstrap</li>
-          <li>SASS</li>
-          <li>Git/GitHub</li>
-          <li>AngularJS</li>
-          <li>Gulp</li>
-          <li>Adobe Illustrator</li>
-          <li>PHP</li>
-        </ul>
+      <ul class="text-group">
+        <li><canvas id="handwriting" width=400>
+          <div class="txtStyle">ME</div>
+        </canvas></li>
+        <li><canvas id="arrow" width=400>
+          <div class="txtStyle">ME</div>
+        </canvas></li>
+        <li><h1>&lth1&gtDevin&nbspWatson&lt/h1&gt</h1></li>
+        <li><p>&ltp&gtFront-&nbspEnd&nbspDeveloper&lt/p&gt</p></li>
+      </ul>
+    </section>
+    <section id="about" class="page full-height">
+      <div class="divider"></div>
+      <article class="content">
+        <div class="about-intro">
+          <h2>Things I Like</h2>
+            <p>Hi there. I am a front-end developer and a translator. Working as a translator for 5 years, I had chance to get to know many industries including web technologies. First I had a little research about it to satisfy my curiosity, next thing I know I decided to become a web developer. Since then I've been studying intensively while doing freelance projects.</p>
+        </div>
+        <div class="interests">
+        <h4>Here are few things I do other than coding and translating:</h4>
+          <ul>
+            <li>
+            <p>Making electronic music</p>
+            <img src="http://placehold.it/350x250">
+            </li>
+            <li>Playing the guitar</li>
+            <li>Juggling</li>
+            <li>Drawing</li>
+            <li>Doing yoga</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <section id="previous-work" class="page full-height">
+      <h2>What I've Done So Far</h2>
+        <p>I always apply what I learn to the next project. I often get lost in blogs and nice websites' source codes trying to improve my style and discover new ideas. In all of my projects I give a special care to organization and planning. Here you can see what I've done so far:</p>
+        <div class="container">
+          <h3>Reflections on the Bay</h3>
+            <img src="#" alt="reflectionsonthebay.com">
+            <p>Customer needed a website which they can customize all they want. They already had an idea about what they want on their webiste and how it should be presented. I used Bootstrap framework to create this nice and simple single-page design.</p>
+        </div>
+        <div class="container">
+          <h3>My Portfolio</h3>
+            <img src="#" alt="devin-watson.com">
+            <p>I designed my portfolio with few different options in Adobe Illustrator CC 2015. I especially focused on responsiveness of the website. I used technologies including Git, SASS, Gulp which allowed me to be very organized and effective.</p>
+        </div>
+        <div class="container">
+          <h3>Pipe Clay Cottage</h3>
+            <img src="#" alt="pipeclaycottage.com">
+            <p>In this project, customer wasn't really sure what they wanted and the timeline was short. Therefore I customized a template they liked using HTML, CSS, XML and Google Maps API.</p>
+        </div>
+    </section>
+    <section id="skills" class="page full-height">
+      <h2>Things I Know</h2>
+        <h3>Languages, Frameworks, Libraries and Technologies</h3>
+          <div class="">
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Javascript</li>
+              <li>JQuery</li>
+              <li>Bootstrap</li>
+              <li>SASS</li>
+              <li>Git/GitHub</li>
+              <li>AngularJS</li>
+              <li>Gulp</li>
+              <li>Adobe Illustrator</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+        </section>
+    <section id="contact" class="page full-height">
+      <div class="container">
+      <h2>Contact me</h2>
+        <h4>Here's my details in case you need a website, are looking for a hire, or want a shoulder to cry on:</h4>
+          <p>Phone</p>
+          <p>Email</p>
+        <div id="divider-photo"></div>
       </div>
     </section>
-<section id="contact">
-  <div class="container full-height">
-  <h2>Contact me</h2>
-    <h4>Here's my details in case you need a website, are looking for a hire, or want a shoulder to cry on:</h4>
-      <p>Phone</p>
-      <p>Email</p>
-    <div id="divider-photo"></div>
-  </div>
-</section>
-        
-<footer>
-    <article>
-      <div id="accounts">
-      <ul>
-        <li><a href="#">github</a></li>
-        <li><a href="#">linkedin</a></li>
-        <li><a href="#">skype</a></li>
-        <li><a href="#">email</a></li>
-      </ul>
-    </article>
-</footer>     
+            
+    <footer>
+        <article>
+          <div id="accounts">
+          <ul>
+            <li><a href="#">github</a></li>
+            <li><a href="#">linkedin</a></li>
+            <li><a href="#">skype</a></li>
+            <li><a href="#">email</a></li>
+          </ul>
+        </article>
+    </footer>
+  </div><!--end page-content-->
+<!--Put .sidebar at bottom of webpage content, before </body>-->
 
+  <aside class="sidebar">
+    <ul class="navigation">
+      <li ><a href="#about" class="active">&nbsp&nbsp&nbsp&nbsp Things I Like</a></li>
+      <li><a href="#previous-work">&nbsp&nbsp&nbsp&nbsp What I've Done</a></li>
+      <li><a href="#skills">&nbsp&nbsp&nbsp&nbsp Things I Know</a></li>
+      <li><a href="#contact">&nbsp&nbsp&nbsp&nbsp Contact Me</a></li>
+    </ul>
+    <ul class="social">
+      <li><img src="../images/github-logo.png"><li>
+      <li><img src="../images/linkedin-logo.png"><li>
+      <li><img src="../images/codepen-black.png"><li>
+    </ul>
+  </aside>
+<!--end sidebar-->
+  
+</div><!--end page-wrap-->
+
+  <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
   <script src="js/script.js"></script>
 </body>
 </html>
