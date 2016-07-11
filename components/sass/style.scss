@@ -1,5 +1,9 @@
 // style.scss
 // ==============
+
+//External Libraries
+@import "breakpoint";
+@import "susy";
 //Bourbon
 @import "bourbon/bourbon";
 
@@ -11,10 +15,6 @@
 @import 'compass/css3/filter';
 @import "compass/css3/flexbox";
 @import "compass/css3/transition";
-
-//External Libraries
-@import "breakpoint";
-@import "susy";
 
 //Partials
 @import "variables";

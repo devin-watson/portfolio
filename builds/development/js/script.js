@@ -25,9 +25,7 @@ $(function(){
 
   "use strict";
 
-    var topoffset = 50;
-    var isTouch = 'ontouchstart' in document.documentElement;   
-      
+    var topoffset = 50;      
 
     var height = $(window).height();
     $(".full-height").css("height", height);
@@ -52,65 +50,22 @@ $(function(){
     	$(".sidebar .social").css("display", "table-cell");
     }
     });
+//h1 disappear
+    var wHeight = $(window).height();
 
-    //Canvas
-    var headName =  $(".text-group h1");
-   headName.one("mouseenter", function(){
+    if(wHeight < 500) {
+    $(".content-wrapper h1").text(" ");
+    }
+    $(window).resize(function(){
+      var wHeight = $(window).height();
+      if(wHeight < 500) {
+    $(".content-wrapper h1").text(" ");
 
-    var ctx = document.getElementById("handwriting").getContext("2d"),
-    dashLen = 220, dashOffset = dashLen, speed = 5,
-    txt = "ME", x = 50, i = 0;
+    } else{
+      $(".content-wrapper h1").text("devin watson");
 
-ctx.font = "40px Comic Sans MS, cursive, TSCu_Comic, sans-serif"; 
-ctx.lineWidth = 5; ctx.lineJoin = "round"; ctx.globalAlpha = 2/3;
-ctx.strokeStyle = ctx.fillStyle = "#B60059";
-ctx.textBaseline = "top";
-
-(function loop() {
-  ctx.clearRect(x, 0, 60, 150);
-  ctx.setLineDash([dashLen - dashOffset, dashOffset - speed]); // create a long dash mask
-  dashOffset -= speed;                                         // reduce dash length
-  ctx.strokeText(txt[i], x, 90);                               // stroke letter
-
-  if (dashOffset > 0) requestAnimationFrame(loop);             // animate
-  else {
-    ctx.fillText(txt[i], x, 90);                               // fill final letter
-    dashOffset = dashLen;                                      // prep next char
-    x += ctx.measureText(txt[i++]).width + ctx.lineWidth * Math.random();
-    ctx.setTransform(1, 0, 0, 1, 0, 3 * Math.random());        // random y-delta
-    ctx.rotate(Math.random() * 0.01);                         // random rotation
-    if (i < txt.length) requestAnimationFrame(loop);
-  }
-})();
-    });//headname
-   headName.one("mouseenter", function(){
-
-    var ctx = document.getElementById("arrow").getContext("2d"),
-    dashLen = 220, dashOffset = dashLen, speed = 2,
-    txt = "⤵", x = 150, i = 0;
-
-ctx.font = "50px Comic Sans MS, cursive, TSCu_Comic, sans-serif"; 
-ctx.lineWidth = 4; ctx.lineJoin = "round"; ctx.globalAlpha = 2/3;
-ctx.strokeStyle = ctx.fillStyle = "#B60059";
-ctx.textBaseline = "top";
-
-(function loop() {
-  ctx.clearRect(x, 0, 60, 150);
-  ctx.setLineDash([dashLen - dashOffset, dashOffset - speed]); // create a long dash mask
-  dashOffset -= speed;                                         // reduce dash length
-  ctx.strokeText(txt[i], x, 90);                               // stroke letter
-
-  if (dashOffset > 0) requestAnimationFrame(loop);             // animate
-  else {
-    ctx.fillText(txt[i], x, 90);                               // fill final letter
-    dashOffset = dashLen;                                      // prep next char
-    x += ctx.measureText(txt[i++]).width + ctx.lineWidth * Math.random();
-    ctx.setTransform(1, 0, 0, 1, 0, 3 * Math.random());        // random y-delta
-    ctx.rotate(Math.random() * 0.005);                         // random rotation
-    if (i < txt.length) requestAnimationFrame(loop);
-  }
-})();
-    });//headname
+    }
+    });
 
 // Animated Scrolling
   $('a[href*=#]:not([href=#])').click(function() {
