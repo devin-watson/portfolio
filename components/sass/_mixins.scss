@@ -112,4 +112,20 @@
 }
 
 
+@mixin skew(
+  $width,
+  $height) {
+
+  $value: $height / $width;
+  -o-transform: translateX($value * 1deg);
+  -moz-transform: translateX($value * 1deg);
+  -ms-transform: translateX($value * 1deg);
+  -webkit-transform: translateX($value * 1deg);
+  transform: translateX($value * 1deg);
+}
+
+
+
+
+
 

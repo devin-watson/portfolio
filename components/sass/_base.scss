@@ -1,14 +1,13 @@
 body{
 	font-family: $bodyFont;
-	color: $white;
-	background-color: lighten($black, 15);
-
+	color: $darkBlue;
+	background-color: $white;
 }
 
 #{headings()} {
  font-family: $headFont;
  font-weight: 400;
- color: $white;
+ color: $darkBlue;
  font-size: 2em;
  line-height: 1.1em; 
 }
