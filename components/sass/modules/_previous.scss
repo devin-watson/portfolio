@@ -1,0 +1,48 @@
+#previous-work{
+	margin-top: 8%;
+	@include display-flex();
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-direction(column);
+	@include breakpoint ($large) {
+	    @include container(80%);
+	}//container
+	// border: 2px solid $yellow;
+	.previous-intro{
+		padding: 2em 0;
+		border-top: 1px dashed rgba($black, .5);
+		// border: 2px solid $orange;
+		@include breakpoint($medium) {
+			@include container(80%);
+		}
+		h2{
+			text-align: center;
+			padding: 1em;
+		}
+		p{
+			text-align: center;
+			line-height: 1.7em;
+		}
+	}//previous-intro
+	.text-group{
+		position: relative;
+		padding-top: 3em;
+		// border: 2px solid $blue;
+		h3{
+			font-size: 1.4em;
+			text-align: left;
+			padding-bottom: 2em;
+		}//h3
+		.project-image{
+			@include bgImg("http://placehold.it/150x150");
+			height: 150px;
+			width: 150px; 		
+
+			}//img
+		p{
+			text-align: left;
+			line-height: 1.5em;
+			font-size: 1.2em;
+		}//p
+	}//text-group
+}//previous-work
