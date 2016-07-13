@@ -22,8 +22,8 @@
     visibility 0s linear
   );
 }
-
 .sidebar {
+  visibility: visible;
   position: fixed;
   top: 0;
   right: 0;
@@ -131,9 +131,10 @@
 		  @include transition(transform 0.3s);
 		}
 	}//toggleX
-	//.content{
-		//padding-left:360px;
-	//}
+	// .content{
+	// 	padding-left:360px;
+ //    @include transition(all .6s);
+	// }
 }
 
 

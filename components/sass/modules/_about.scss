@@ -1,39 +1,32 @@
 #about{
-	background-color: $white;
-	.content{
-		.about-intro{
-			h2{
-				padding: 50px 0 20px 0;
-				text-align: center;
-				color: $pink;
-			}
-			p{
-				padding: 20px 0;
-				text-align: center;
-				color: $darkBlue;
-			}
-		}//.content
-	.interests{
-		@include pad(1,1);
-		h4{
-			padding: 30px 0;
-			color: $blue;
-			@include text-shadow($black 0 0 .5px);
-			text-align: center;
+	@include container(90%);
+	background-color: $opt-darkBlue;
+	margin-top: 8%;
+	@include display-flex();
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-direction(column);
+	@include breakpoint ($large) {
+	    @include container(80%);
+	}//container
+	 //border: 2px solid $yellow;
+	 //border-top: 1px dashed rgba($black, .5);
+	.about-intro{
+		padding: 10% 0;
+		// border: 2px solid $orange;
+		@include breakpoint($medium) {
+			@include container(80%);
 		}
-		ul{
-			text-decoration: none;
-			list-style: none;
+		h2{
 			text-align: center;
-			display: block;
-			li{
-				color: $darkBlue;
-				font-family: $bodyFont;
-				font-size: 1.2em;
-				padding: 10px 0;
-				margin: 5px 0;
-			}
+			padding-bottom: 1em;
+			color: $opt-beige;
 		}
-	}
-	}
+		p{
+			text-align: center;
+			line-height: 1.7em;
+			color: $opt-beige;
+			padding: 20px 0;
+		}
+	}//about-intro
 }

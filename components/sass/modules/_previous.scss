@@ -7,10 +7,10 @@
 	@include breakpoint ($large) {
 	    @include container(80%);
 	}//container
-	// border: 2px solid $yellow;
+	 //border: 2px solid $yellow;
+	 border-top: 1px dashed rgba($black, .5);
 	.previous-intro{
 		padding: 2em 0;
-		border-top: 1px dashed rgba($black, .5);
 		// border: 2px solid $orange;
 		@include breakpoint($medium) {
 			@include container(80%);
@@ -24,25 +24,100 @@
 			line-height: 1.7em;
 		}
 	}//previous-intro
-	.text-group{
-		position: relative;
+	.content-group{
 		padding-top: 3em;
-		// border: 2px solid $blue;
-		h3{
-			font-size: 1.4em;
-			text-align: left;
-			padding-bottom: 2em;
-		}//h3
-		.project-image{
-			@include bgImg("http://placehold.it/150x150");
-			height: 150px;
-			width: 150px; 		
-
+		//border: 2px solid $blue;
+		.group-item-left, .group-item-right{
+			//border: 2px solid $green;
+			margin: 10% 0;
+			@include display-flex(inline-flex);
+			@include justify-content(space-around);
+			.project-image{
+				@include span(6 of 12);
+				&#reflections{
+					@include bgImg("../images/reflections-ss.png");
+					height: 350px;
+					width: 400px; 	
+					background-size: contain;
+					opacity: .7;
+					@include transition(opacity 0.8s);
+					&:hover{
+	  				opacity: 1;
+	  				@include transition(opacity 0.8s);
+	  				}//hover
+				}
+				&#portfolio{
+					@include bgImg("../images/portfolio-ss.png");
+					height: 350px;
+					width: 400px; 	
+					background-size: contain;
+					opacity: .7;
+					@include transition(opacity 0.8s);
+					&:hover{
+	  				opacity: 1;
+	  				@include transition(opacity 0.8s);
+	  				}//hover
+				}
+				&#pipe-clay{
+					@include bgImg("../images/pipe-clay-ss.png");
+					height: 350px;
+					width: 400px; 	
+					background-size: contain;
+					opacity: .7;
+					@include transition(opacity 0.8s);
+					&:hover{
+	  				opacity: 1;
+	  				@include transition(opacity 0.8s);
+	  				}//hover
+				}
 			}//img
-		p{
-			text-align: left;
-			line-height: 1.5em;
-			font-size: 1.2em;
-		}//p
-	}//text-group
+			.text-group{
+				@include align-self(center);
+				@include span(6 of 12);
+				padding: 2em;
+				//border: 2px solid $pink;
+				h3{
+					font-size: 1.4em;
+					text-align: left;
+					padding-bottom: 1.1em;
+				}//h3
+		
+				p{
+					text-align: left;
+					line-height: 1.5em;
+					font-size: 1.1em;
+				}//p
+			}//text-group
+			@include breakpoint ($medium 0) {
+				@include display-flex(flex);
+				@include flex-direction(column);
+				@include justify-content(center);
+				.project-image{
+					@include span(12 of 12);
+					margin: 30px 0;
+				}
+				.text-group{
+					@include span(12 of 12);
+				}
+			}
+		}//group-item-left, group-item-right
+		.group-item-left{
+			.project-image{
+				@include order(1);
+			}
+			.text-group{
+				@include order(0);
+			}
+		}
+		.group-item-right{
+			@include breakpoint ($medium 0) {
+				.project-image{
+					@include order(1);
+				}
+				.text-group{
+					@include order(0);
+				}
+			}
+		}
+	}//content-group
 }//previous-work

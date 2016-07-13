@@ -1,0 +1,14 @@
+footer{
+	@include container(90%);
+	@include display-flex();
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-direction(column);
+	@include breakpoint ($large) {
+	    @include container(80%);
+	}//container
+	padding: 40px 0;
+	p{
+		font-size: 1.1em;
+	}
+}

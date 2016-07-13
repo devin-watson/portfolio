@@ -1,0 +1,54 @@
+#skills{
+	@include container(90%);
+	@include display-flex();
+    @include align-items(center);
+    @include justify-content(space-between);
+    @include flex-direction(column);
+	@include breakpoint ($large) {
+	    @include container(80%);
+	}//container
+	margin-top: 8%;
+	//border: 2px solid $yellow;
+	border-top: 1px dashed rgba($black, .5);
+	.skills-intro{
+		padding: 2em 0;
+		// border: 2px solid $orange;
+		@include breakpoint($medium) {
+			@include container(80%);
+		}
+		h2{
+			text-align: center;
+			padding: 1em;
+		}
+		h3{
+			text-align: center;
+			line-height: 1.7em;
+			font-family: $navFont;
+			font-size: 1.3em;
+		}
+	}//skills-intro
+	.content-group{
+		//border: 1px solid $green;
+		width: 100%;
+		@include display-flex();
+		@include justify-content(space-around);
+		.skills-list, .skills-dots{
+			//border: 1px solid $blue;
+			li{
+				//border: 1px solid $beige;
+				line-height: 1.2em;
+				padding: 10px 0;
+			}
+		}
+		.skills-dots{
+			li{
+				color: $opt-blue;
+				letter-spacing: 1em;
+			&:first-child{
+				letter-spacing: .1em;
+				color: $darkBlue;
+			}
+			}
+		}
+	}
+}

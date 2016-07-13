@@ -2,6 +2,7 @@ body{
 	font-family: $bodyFont;
 	color: $darkBlue;
 	background-color: $white;
+	-webkit-font-smoothing: antialiased;
 }
 
 #{headings()} {

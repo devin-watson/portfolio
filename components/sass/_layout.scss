@@ -3,9 +3,10 @@ body{
 	width: 100%;
 	min-height: 100%;
 	position: relative;
+
   .page {
     position: relative;
     padding-top: 0;
-    @include container(80%)
+    @include container(85%);
   }
 }
