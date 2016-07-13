@@ -23,7 +23,6 @@
   );
 }
 .sidebar {
-  visibility: visible;
   position: fixed;
   top: 0;
   right: 0;
@@ -38,30 +37,31 @@
   	list-style: none;
   	margin: 70px 0 0 0;
   	padding: 0;
-  	li{
-  	  margin-bottom: 8px;
-  	  padding: 0;
-  	  display: block;
-      a{
-        opacity: 1;
-        width: 100%;
-        color: $navColor;
-        font-family: $navFont;
-        font-size: 1.4em;
-        line-height: 1.2em;
-        text-decoration: none;
-        display: block;
-        padding: 20px 0;
-        @include transition(color .8s);
-        &:hover{
-        color: $linkHover;
-        border-right: 5px solid $linkHover;
-        font-weight: 700;
-        @include transition(color .8s);
-        }//a:hover
-      }//a
-  	}//li
-  }//ul
+    	li{
+    	  margin-bottom: 8px;
+    	  padding: 0;
+    	  display: block;
+          a{
+            opacity: 1;
+            width: 100%;
+            color: $navColor;
+            font-family: $navFont;
+            font-size: 1.4em;
+            line-height: 1.2em;
+            text-decoration: none;
+            display: block;
+            padding: 20px 0;
+            @include transition(color .8s);
+
+            &:hover{
+            color: $linkHover;
+            border-right: 5px solid $linkHover;
+            font-weight: 700;
+            @include transition(color .8s);
+            }//a:hover
+          }//a
+    	}//li
+  }//.navigation(ul)
   .social{
   	list-style: none;
   	display: table;
@@ -96,7 +96,7 @@
 
  #sidebartoggler:checked + .wrapper {
  	.sidebar {
-    	left: 0px; 
+    left: 0px; 
 	}
 	.toggle{
 		//left:380px;
@@ -129,11 +129,12 @@
       @include transform(rotate(180deg));
 		  color: $xHover;
 		  @include transition(transform 0.3s);
-		}
+		}//toggleX.hover
 	}//toggleX
+
 	// .content{
 	// 	padding-left:360px;
- //    @include transition(all .6s);
+  //   @include transition(all .6s);
 	// }
 }
 

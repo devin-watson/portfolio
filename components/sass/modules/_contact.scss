@@ -7,16 +7,23 @@
     @include flex-direction(column);
 	@include breakpoint ($large) {
 	    @include container(80%);
-	}//container
+	}//breakpoint
+	@include breakpoint ($small 0) {
+		@include container(100%);
+	}//breakpoint
 	margin-top: 0;
 	//border: 2px solid $yellow;
 	border-top: 1px dashed rgba($opt-beige, .9);
+	padding: 5% 0;
 	.contact-intro{
-		padding: 2em 0;
+		padding: 10% 3%;
 		// border: 2px solid $orange;
 		@include breakpoint($medium) {
 			@include container(80%);
 		}
+		@include breakpoint($small 0) {
+			padding: 10% 3%;
+		} 
 		h2{
 			text-align: center;
 			padding: 1em;
@@ -44,13 +51,14 @@
     	// border: 3px solid $yellow;
 	    	list-style: none;
 		  	display: table;
+		  	padding: 4% 0;
 	    	li{
 		  		display: table-cell;
 		  		padding: 0 20px;
 		  		cursor: pointer;
 		  		img{
 		  			opacity: .7;
-		  			width: 40px;
+		  			width: 2em;
 		  			@include transition(all 0.8s);
 		  			&:hover{
 		  				@include scale(1.3);

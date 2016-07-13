@@ -44,11 +44,17 @@
 			li{
 				color: $opt-blue;
 				letter-spacing: 1em;
-			&:first-child{
-				letter-spacing: .1em;
-				color: $darkBlue;
-			}
-			}
+				@include breakpoint($small 0) {
+					letter-spacing: .5em;
+				}
+				&:first-child{
+					color: $darkBlue;
+					letter-spacing: 0.01em;
+				}//first-child
+			}//li
+		}//skills-dots
+		.skills-list{
+			font-weight: 600;
 		}
-	}
+	}//content-group
 }

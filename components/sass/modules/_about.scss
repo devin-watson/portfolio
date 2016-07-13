@@ -9,14 +9,20 @@
 	@include breakpoint ($large) {
 	    @include container(80%);
 	}//container
+	@include breakpoint ($small 0) {
+		@include container(100%);
+	}
 	 //border: 2px solid $yellow;
 	 //border-top: 1px dashed rgba($black, .5);
 	.about-intro{
-		padding: 10% 0;
+		padding: 10% 3%;
 		// border: 2px solid $orange;
 		@include breakpoint($medium) {
 			@include container(80%);
 		}
+		@include breakpoint($small 0) {
+			padding: 10% 3%;
+		} 
 		h2{
 			text-align: center;
 			padding-bottom: 1em;

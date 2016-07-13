@@ -7,14 +7,9 @@
 	@include breakpoint ($large) {
 	    @include container(80%);
 	}//container
-	 //border: 2px solid $yellow;
 	 border-top: 1px dashed rgba($black, .5);
 	.previous-intro{
 		padding: 2em 0;
-		// border: 2px solid $orange;
-		@include breakpoint($medium) {
-			@include container(80%);
-		}
 		h2{
 			text-align: center;
 			padding: 1em;
@@ -26,18 +21,19 @@
 	}//previous-intro
 	.content-group{
 		padding-top: 3em;
-		//border: 2px solid $blue;
+		text-align: center;
 		.group-item-left, .group-item-right{
-			//border: 2px solid $green;
-			margin: 10% 0;
+			margin: 6% 0;
 			@include display-flex(inline-flex);
-			@include justify-content(space-around);
+			@include align-content(center);
+			@include justify-content(space-between);
+			@include container(90%);
 			.project-image{
 				@include span(6 of 12);
 				&#reflections{
 					@include bgImg("../images/reflections-ss.png");
 					height: 350px;
-					width: 400px; 	
+					max-width: 400px; 	
 					background-size: contain;
 					opacity: .7;
 					@include transition(opacity 0.8s);
@@ -49,7 +45,7 @@
 				&#portfolio{
 					@include bgImg("../images/portfolio-ss.png");
 					height: 350px;
-					width: 400px; 	
+					max-width: 400px; 	
 					background-size: contain;
 					opacity: .7;
 					@include transition(opacity 0.8s);
@@ -61,7 +57,7 @@
 				&#pipe-clay{
 					@include bgImg("../images/pipe-clay-ss.png");
 					height: 350px;
-					width: 400px; 	
+					max-width: 400px; 	
 					background-size: contain;
 					opacity: .7;
 					@include transition(opacity 0.8s);
@@ -72,10 +68,9 @@
 				}
 			}//img
 			.text-group{
-				@include align-self(center);
 				@include span(6 of 12);
 				padding: 2em;
-				//border: 2px solid $pink;
+				@include align-self(center);
 				h3{
 					font-size: 1.4em;
 					text-align: left;
@@ -88,18 +83,29 @@
 					font-size: 1.1em;
 				}//p
 			}//text-group
-			@include breakpoint ($medium 0) {
+			@include breakpoint ($small 0) {
 				@include display-flex(flex);
 				@include flex-direction(column);
 				@include justify-content(center);
+				@include align-content(center);
+				@include container(100%);
 				.project-image{
 					@include span(12 of 12);
-					margin: 30px 0;
+					@include align-self(center);
+					margin: 10px 0 0 0;
+					width: 100%;
 				}
 				.text-group{
 					@include span(12 of 12);
+					padding: 0 3%;
+					h3{
+						text-align: center;
+					}
+					p{
+						text-align: center;
+					}
 				}
-			}
+			}//breakpoint
 		}//group-item-left, group-item-right
 		.group-item-left{
 			.project-image{
@@ -110,7 +116,7 @@
 			}
 		}
 		.group-item-right{
-			@include breakpoint ($medium 0) {
+			@include breakpoint ($small 0) {
 				.project-image{
 					@include order(1);
 				}

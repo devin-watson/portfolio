@@ -104,7 +104,7 @@ p {
 
 /* line 1, ../../../components/sass/_layout.scss */
 body {
-  margin: 0;
+  margin: 0 auto;
   width: 100%;
   min-height: 100%;
   position: relative;
@@ -116,6 +116,7 @@ body .page {
   max-width: 85%;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 }
 /* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 body .page:after {
@@ -357,7 +358,6 @@ body .page:after {
 
 /* line 25, ../../../components/sass/modules/_nav.scss */
 .sidebar {
-  visibility: visible;
   position: fixed;
   top: 0;
   right: 0;
@@ -372,19 +372,19 @@ body .page:after {
   background: rgba(255, 255, 255, 0.9);
   z-index: 999;
 }
-/* line 37, ../../../components/sass/modules/_nav.scss */
+/* line 36, ../../../components/sass/modules/_nav.scss */
 .sidebar .navigation {
   list-style: none;
   margin: 70px 0 0 0;
   padding: 0;
 }
-/* line 41, ../../../components/sass/modules/_nav.scss */
+/* line 40, ../../../components/sass/modules/_nav.scss */
 .sidebar .navigation li {
   margin-bottom: 8px;
   padding: 0;
   display: block;
 }
-/* line 45, ../../../components/sass/modules/_nav.scss */
+/* line 44, ../../../components/sass/modules/_nav.scss */
 .sidebar .navigation li a {
   opacity: 1;
   width: 100%;
@@ -538,12 +538,26 @@ body .page:after {
     clear: both;
   }
 }
-/* line 14, ../../../components/sass/modules/_about.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 1, ../../../components/sass/modules/_about.scss */
+  #about {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  #about:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+/* line 17, ../../../components/sass/modules/_about.scss */
 #about .about-intro {
-  padding: 10% 0;
+  padding: 10% 3%;
 }
 @media (min-width: 960px) {
-  /* line 14, ../../../components/sass/modules/_about.scss */
+  /* line 17, ../../../components/sass/modules/_about.scss */
   #about .about-intro {
     max-width: 80%;
     margin-left: auto;
@@ -556,13 +570,19 @@ body .page:after {
     clear: both;
   }
 }
-/* line 20, ../../../components/sass/modules/_about.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 17, ../../../components/sass/modules/_about.scss */
+  #about .about-intro {
+    padding: 10% 3%;
+  }
+}
+/* line 26, ../../../components/sass/modules/_about.scss */
 #about .about-intro h2 {
   text-align: center;
   padding-bottom: 1em;
   color: #F4F7D9;
 }
-/* line 25, ../../../components/sass/modules/_about.scss */
+/* line 31, ../../../components/sass/modules/_about.scss */
 #about .about-intro p {
   text-align: center;
   line-height: 1.7em;
@@ -597,47 +617,45 @@ body .page:after {
     clear: both;
   }
 }
-/* line 12, ../../../components/sass/modules/_previous.scss */
+/* line 11, ../../../components/sass/modules/_previous.scss */
 #previous-work .previous-intro {
   padding: 2em 0;
 }
-@media (min-width: 960px) {
-  /* line 12, ../../../components/sass/modules/_previous.scss */
-  #previous-work .previous-intro {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
-  #previous-work .previous-intro:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-}
-/* line 18, ../../../components/sass/modules/_previous.scss */
+/* line 13, ../../../components/sass/modules/_previous.scss */
 #previous-work .previous-intro h2 {
   text-align: center;
   padding: 1em;
 }
-/* line 22, ../../../components/sass/modules/_previous.scss */
+/* line 17, ../../../components/sass/modules/_previous.scss */
 #previous-work .previous-intro p {
   text-align: center;
   line-height: 1.7em;
 }
-/* line 27, ../../../components/sass/modules/_previous.scss */
+/* line 22, ../../../components/sass/modules/_previous.scss */
 #previous-work .content-group {
   padding-top: 3em;
+  text-align: center;
 }
-/* line 30, ../../../components/sass/modules/_previous.scss */
+/* line 25, ../../../components/sass/modules/_previous.scss */
 #previous-work .content-group .group-item-left, #previous-work .content-group .group-item-right {
-  margin: 10% 0;
+  margin: 6% 0;
   display: -webkit-inline-flex;
   display: inline-flex;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
+  -webkit-align-content: center;
+  align-content: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
-/* line 35, ../../../components/sass/modules/_previous.scss */
+/* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+#previous-work .content-group .group-item-left:after, #previous-work .content-group .group-item-right:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 31, ../../../components/sass/modules/_previous.scss */
 #previous-work .content-group .group-item-left .project-image, #previous-work .content-group .group-item-right .project-image {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -647,7 +665,7 @@ body .page:after {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
-/* line 37, ../../../components/sass/modules/_previous.scss */
+/* line 33, ../../../components/sass/modules/_previous.scss */
 #previous-work .content-group .group-item-left .project-image#reflections, #previous-work .content-group .group-item-right .project-image#reflections {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/reflections-ss.png");
   background-repeat: no-repeat;
@@ -657,7 +675,7 @@ body .page:after {
   -o-background-size: cover;
   background-size: cover;
   height: 350px;
-  width: 400px;
+  max-width: 400px;
   background-size: contain;
   opacity: .7;
   -moz-transition: opacity 0.8s;
@@ -665,7 +683,7 @@ body .page:after {
   -webkit-transition: opacity 0.8s;
   transition: opacity 0.8s;
 }
-/* line 44, ../../../components/sass/modules/_previous.scss */
+/* line 40, ../../../components/sass/modules/_previous.scss */
 #previous-work .content-group .group-item-left .project-image#reflections:hover, #previous-work .content-group .group-item-right .project-image#reflections:hover {
   opacity: 1;
   -moz-transition: opacity 0.8s;
@@ -673,7 +691,7 @@ body .page:after {
   -webkit-transition: opacity 0.8s;
   transition: opacity 0.8s;
 }
-/* line 49, ../../../components/sass/modules/_previous.scss */
+/* line 45, ../../../components/sass/modules/_previous.scss */
 #previous-work .content-group .group-item-left .project-image#portfolio, #previous-work .content-group .group-item-right .project-image#portfolio {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/portfolio-ss.png");
   background-repeat: no-repeat;
@@ -683,7 +701,7 @@ body .page:after {
   -o-background-size: cover;
   background-size: cover;
   height: 350px;
-  width: 400px;
+  max-width: 400px;
   background-size: contain;
   opacity: .7;
   -moz-transition: opacity 0.8s;
@@ -691,7 +709,7 @@ body .page:after {
   -webkit-transition: opacity 0.8s;
   transition: opacity 0.8s;
 }
-/* line 56, ../../../components/sass/modules/_previous.scss */
+/* line 52, ../../../components/sass/modules/_previous.scss */
 #previous-work .content-group .group-item-left .project-image#portfolio:hover, #previous-work .content-group .group-item-right .project-image#portfolio:hover {
   opacity: 1;
   -moz-transition: opacity 0.8s;
@@ -699,7 +717,7 @@ body .page:after {
   -webkit-transition: opacity 0.8s;
   transition: opacity 0.8s;
 }
-/* line 61, ../../../components/sass/modules/_previous.scss */
+/* line 57, ../../../components/sass/modules/_previous.scss */
 #previous-work .content-group .group-item-left .project-image#pipe-clay, #previous-work .content-group .group-item-right .project-image#pipe-clay {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/pipe-clay-ss.png");
   background-repeat: no-repeat;
@@ -709,7 +727,7 @@ body .page:after {
   -o-background-size: cover;
   background-size: cover;
   height: 350px;
-  width: 400px;
+  max-width: 400px;
   background-size: contain;
   opacity: .7;
   -moz-transition: opacity 0.8s;
@@ -717,7 +735,7 @@ body .page:after {
   -webkit-transition: opacity 0.8s;
   transition: opacity 0.8s;
 }
-/* line 68, ../../../components/sass/modules/_previous.scss */
+/* line 64, ../../../components/sass/modules/_previous.scss */
 #previous-work .content-group .group-item-left .project-image#pipe-clay:hover, #previous-work .content-group .group-item-right .project-image#pipe-clay:hover {
   opacity: 1;
   -moz-transition: opacity 0.8s;
@@ -725,10 +743,8 @@ body .page:after {
   -webkit-transition: opacity 0.8s;
   transition: opacity 0.8s;
 }
-/* line 74, ../../../components/sass/modules/_previous.scss */
+/* line 70, ../../../components/sass/modules/_previous.scss */
 #previous-work .content-group .group-item-left .text-group, #previous-work .content-group .group-item-right .text-group {
-  -webkit-align-self: center;
-  align-self: center;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -737,21 +753,23 @@ body .page:after {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
   padding: 2em;
+  -webkit-align-self: center;
+  align-self: center;
 }
-/* line 79, ../../../components/sass/modules/_previous.scss */
+/* line 74, ../../../components/sass/modules/_previous.scss */
 #previous-work .content-group .group-item-left .text-group h3, #previous-work .content-group .group-item-right .text-group h3 {
   font-size: 1.4em;
   text-align: left;
   padding-bottom: 1.1em;
 }
-/* line 85, ../../../components/sass/modules/_previous.scss */
+/* line 80, ../../../components/sass/modules/_previous.scss */
 #previous-work .content-group .group-item-left .text-group p, #previous-work .content-group .group-item-right .text-group p {
   text-align: left;
   line-height: 1.5em;
   font-size: 1.1em;
 }
-@media (min-width: 0) and (max-width: 960px) {
-  /* line 30, ../../../components/sass/modules/_previous.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 25, ../../../components/sass/modules/_previous.scss */
   #previous-work .content-group .group-item-left, #previous-work .content-group .group-item-right {
     display: -webkit-flex;
     display: flex;
@@ -759,8 +777,19 @@ body .page:after {
     flex-direction: column;
     -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-content: center;
+    align-content: center;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
-  /* line 95, ../../../components/sass/modules/_previous.scss */
+  /* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  #previous-work .content-group .group-item-left:after, #previous-work .content-group .group-item-right:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  /* line 92, ../../../components/sass/modules/_previous.scss */
   #previous-work .content-group .group-item-left .project-image, #previous-work .content-group .group-item-right .project-image {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -769,9 +798,12 @@ body .page:after {
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%;
-    margin: 30px 0;
+    -webkit-align-self: center;
+    align-self: center;
+    margin: 10px 0 0 0;
+    width: 100%;
   }
-  /* line 99, ../../../components/sass/modules/_previous.scss */
+  /* line 98, ../../../components/sass/modules/_previous.scss */
   #previous-work .content-group .group-item-left .text-group, #previous-work .content-group .group-item-right .text-group {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -780,25 +812,34 @@ body .page:after {
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%;
+    padding: 0 3%;
+  }
+  /* line 101, ../../../components/sass/modules/_previous.scss */
+  #previous-work .content-group .group-item-left .text-group h3, #previous-work .content-group .group-item-right .text-group h3 {
+    text-align: center;
+  }
+  /* line 104, ../../../components/sass/modules/_previous.scss */
+  #previous-work .content-group .group-item-left .text-group p, #previous-work .content-group .group-item-right .text-group p {
+    text-align: center;
   }
 }
-/* line 105, ../../../components/sass/modules/_previous.scss */
+/* line 111, ../../../components/sass/modules/_previous.scss */
 #previous-work .content-group .group-item-left .project-image {
   -webkit-order: 1;
   order: 1;
 }
-/* line 108, ../../../components/sass/modules/_previous.scss */
+/* line 114, ../../../components/sass/modules/_previous.scss */
 #previous-work .content-group .group-item-left .text-group {
   -webkit-order: 0;
   order: 0;
 }
-@media (min-width: 0) and (max-width: 960px) {
-  /* line 114, ../../../components/sass/modules/_previous.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 120, ../../../components/sass/modules/_previous.scss */
   #previous-work .content-group .group-item-right .project-image {
     -webkit-order: 1;
     order: 1;
   }
-  /* line 117, ../../../components/sass/modules/_previous.scss */
+  /* line 123, ../../../components/sass/modules/_previous.scss */
   #previous-work .content-group .group-item-right .text-group {
     -webkit-order: 0;
     order: 0;
@@ -889,10 +930,20 @@ body .page:after {
   color: #A4CFBE;
   letter-spacing: 1em;
 }
-/* line 47, ../../../components/sass/modules/_skills.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 44, ../../../components/sass/modules/_skills.scss */
+  #skills .content-group .skills-dots li {
+    letter-spacing: .5em;
+  }
+}
+/* line 50, ../../../components/sass/modules/_skills.scss */
 #skills .content-group .skills-dots li:first-child {
-  letter-spacing: .1em;
   color: #292D36;
+  letter-spacing: 0.01em;
+}
+/* line 56, ../../../components/sass/modules/_skills.scss */
+#skills .content-group .skills-list {
+  font-weight: 600;
 }
 
 /* line 1, ../../../components/sass/modules/_contact.scss */
@@ -911,6 +962,7 @@ body .page:after {
   flex-direction: column;
   margin-top: 0;
   border-top: 1px dashed rgba(244, 247, 217, 0.9);
+  padding: 5% 0;
 }
 /* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 #contact:after {
@@ -932,12 +984,26 @@ body .page:after {
     clear: both;
   }
 }
-/* line 14, ../../../components/sass/modules/_contact.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 1, ../../../components/sass/modules/_contact.scss */
+  #contact {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  #contact:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+/* line 18, ../../../components/sass/modules/_contact.scss */
 #contact .contact-intro {
-  padding: 2em 0;
+  padding: 10% 3%;
 }
 @media (min-width: 960px) {
-  /* line 14, ../../../components/sass/modules/_contact.scss */
+  /* line 18, ../../../components/sass/modules/_contact.scss */
   #contact .contact-intro {
     max-width: 80%;
     margin-left: auto;
@@ -950,13 +1016,19 @@ body .page:after {
     clear: both;
   }
 }
-/* line 20, ../../../components/sass/modules/_contact.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 18, ../../../components/sass/modules/_contact.scss */
+  #contact .contact-intro {
+    padding: 10% 3%;
+  }
+}
+/* line 27, ../../../components/sass/modules/_contact.scss */
 #contact .contact-intro h2 {
   text-align: center;
   padding: 1em;
   color: #F4F7D9;
 }
-/* line 25, ../../../components/sass/modules/_contact.scss */
+/* line 32, ../../../components/sass/modules/_contact.scss */
 #contact .contact-intro h4 {
   text-align: center;
   line-height: 1.7em;
@@ -965,38 +1037,39 @@ body .page:after {
   padding-bottom: 60px;
   color: #F4F7D9;
 }
-/* line 33, ../../../components/sass/modules/_contact.scss */
+/* line 40, ../../../components/sass/modules/_contact.scss */
 #contact .contact-intro p {
   font-size: 1.2em;
   line-height: 1em;
   padding: 10px 0;
   color: #F4F7D9;
 }
-/* line 38, ../../../components/sass/modules/_contact.scss */
+/* line 45, ../../../components/sass/modules/_contact.scss */
 #contact .contact-intro p img {
   width: 1.7em;
 }
-/* line 43, ../../../components/sass/modules/_contact.scss */
+/* line 50, ../../../components/sass/modules/_contact.scss */
 #contact .social {
   list-style: none;
   display: table;
+  padding: 4% 0;
 }
-/* line 47, ../../../components/sass/modules/_contact.scss */
+/* line 55, ../../../components/sass/modules/_contact.scss */
 #contact .social li {
   display: table-cell;
   padding: 0 20px;
   cursor: pointer;
 }
-/* line 51, ../../../components/sass/modules/_contact.scss */
+/* line 59, ../../../components/sass/modules/_contact.scss */
 #contact .social li img {
   opacity: .7;
-  width: 40px;
+  width: 2em;
   -moz-transition: all 0.8s;
   -o-transition: all 0.8s;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
-/* line 55, ../../../components/sass/modules/_contact.scss */
+/* line 63, ../../../components/sass/modules/_contact.scss */
 #contact .social li img:hover {
   -moz-transform: scale(1.3, 1.3);
   -ms-transform: scale(1.3, 1.3);
