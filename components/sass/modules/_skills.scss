@@ -46,11 +46,18 @@
 				letter-spacing: 1em;
 				@include breakpoint($small 0) {
 					letter-spacing: .5em;
-				}
+				}//breakpoint $small 0
 				&:first-child{
 					color: $darkBlue;
 					letter-spacing: 0.01em;
 				}//first-child
+				@include breakpoint ($tiny 0) {
+					letter-spacing: .01em;
+					&:first-child{
+					color: $darkBlue;
+					font-size: .9em;
+				}//first-child
+				}//breakpoint $tiny 0
 			}//li
 		}//skills-dots
 		.skills-list{

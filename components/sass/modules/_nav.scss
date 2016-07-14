@@ -35,7 +35,7 @@
   z-index: 999;
   .navigation{
   	list-style: none;
-  	margin: 70px 0 0 0;
+  	margin-top: 70px;
   	padding: 0;
     	li{
     	  margin-bottom: 8px;
@@ -62,6 +62,22 @@
           }//a
     	}//li
   }//.navigation(ul)
+  @include breakpoint ($tiny 0) {
+      background: rgba($navBgColor, 1);
+      .navigation{
+          margin-top: 40px;
+        li{
+          margin-bottom: 0;
+          a{
+            padding: 12px 0;
+            font-size: 1.2em;
+            line-height: 1.2em;
+            border-bottom: 1px dashed $linkHover;
+            @include transition(none);
+          }//a
+        }//li
+      }//navigation
+    }//breakpoint
   .social{
   	list-style: none;
   	display: table;
@@ -138,4 +154,27 @@
 	// }
 }
 
+.landscape{
+  width: 100%;
+  height: 47.5px;
+  position: fixed;
+  background-color: $white;
+  z-index: 1001;
+  .navigation{
+      @include display-flex();
+      @include align-content(center);
+      @include justify-content(space-around); 
+      border-bottom: 2px solid $navColor; 
+      padding: 10px 0;
+    li{
+      padding-top: 10px;
+        a{
+        text-decoration: none;
+        font-family: $navFont;
+        font-size: 1em;
+        color: $navColor;
+      }//a
+    }//li
+  }//navigation
+}//landscape
 
