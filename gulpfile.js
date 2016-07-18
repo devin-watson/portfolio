@@ -27,11 +27,10 @@ if (env==='development') {
 
 jsSources = [
   'components/scripts/jqloader.js',
-  'components/scripts/TweenMax.min.js',
-  'components/scripts/main-nav.js',
   'components/scripts/jquery.scrollmagic.min.js',
   'components/scripts/script.js'
 ];
+
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
 

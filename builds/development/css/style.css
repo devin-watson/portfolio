@@ -587,11 +587,11 @@ body .page:after {
 
 /* line 1, ../../../components/sass/modules/_about.scss */
 #about {
+  margin-top: 8%;
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
   background-color: #417378;
-  margin-top: 8%;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -1145,6 +1145,7 @@ body .page:after {
 
 /* line 1, ../../../components/sass/modules/_footer.scss */
 footer {
+  background-color: #FFFFFF;
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -1178,23 +1179,23 @@ footer:after {
     clear: both;
   }
 }
-/* line 11, ../../../components/sass/modules/_footer.scss */
+/* line 12, ../../../components/sass/modules/_footer.scss */
 footer p {
   font-size: 1.1em;
 }
-/* line 14, ../../../components/sass/modules/_footer.scss */
+/* line 15, ../../../components/sass/modules/_footer.scss */
 footer .social {
   list-style: none;
   display: table;
   padding: 4% 0;
 }
-/* line 19, ../../../components/sass/modules/_footer.scss */
+/* line 20, ../../../components/sass/modules/_footer.scss */
 footer .social li {
   display: table-cell;
   padding: 0 20px;
   cursor: pointer;
 }
-/* line 23, ../../../components/sass/modules/_footer.scss */
+/* line 24, ../../../components/sass/modules/_footer.scss */
 footer .social li img {
   opacity: .7;
   width: 2em;
@@ -1203,7 +1204,7 @@ footer .social li img {
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
-/* line 27, ../../../components/sass/modules/_footer.scss */
+/* line 28, ../../../components/sass/modules/_footer.scss */
 footer .social li img:hover {
   -moz-transform: scale(1.3, 1.3);
   -ms-transform: scale(1.3, 1.3);

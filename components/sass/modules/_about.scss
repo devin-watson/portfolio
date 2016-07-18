@@ -1,7 +1,7 @@
 #about{
+	margin-top: 8%;
 	@include container(90%);
 	background-color: $opt-darkBlue;
-	margin-top: 8%;
 	@include display-flex();
     @include align-items(center);
     @include justify-content(center);

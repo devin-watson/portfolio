@@ -1,4 +1,5 @@
 footer{
+	background-color: $white;
 	@include container(90%);
 	@include display-flex();
     @include align-items(center);
