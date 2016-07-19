@@ -7,8 +7,22 @@
 	@include breakpoint ($large) {
 	    @include container(80%);
 	}//container
-	 border-top: 1px dashed rgba($black, .5);
+	@include breakpoint ($medium 0) {
+	    border-top: 1px dashed rgba($darkBlue, .9);
+	}//container
 	.previous-intro{
+		.seperator{
+			display: none;
+			@include breakpoint($medium) {
+				text-align: center;
+				display: block;
+				margin: 2rem 0 9rem 0;
+				width: 100%;
+				height: 1px;
+				background-color: rgba($darkBlue, .5);
+				@include rotate(5deg);
+			}
+		}
 		padding: 2em 0;
 		h2{
 			text-align: center;
@@ -35,42 +49,45 @@
 					height: 350px;
 					max-width: 400px; 	
 					background-size: contain;
-					opacity: .7;
-					@include transition(opacity 0.8s);
-					&:hover{
-	  				opacity: 1;
-	  				@include transition(opacity 0.8s);
-	  				}//hover
+					@include breakpoint($medium) {
+						@include transition(all 0.9s);
+						&:hover{
+		  				@include scale(1.1);
+		  				@include transition(all 0.9s);
+		  				}//hover
+					}
 				}
 				&#portfolio{
 					@include bgImg("../images/portfolio-ss.png");
 					height: 350px;
 					max-width: 400px; 	
 					background-size: contain;
-					opacity: .7;
-					@include transition(opacity 0.8s);
-					&:hover{
-	  				opacity: 1;
-	  				@include transition(opacity 0.8s);
-	  				}//hover
+					@include breakpoint($medium) {
+						@include transition(all 0.9s);
+						&:hover{
+		  				@include scale(1.1);
+		  				@include transition(all 0.9s);
+		  				}//hover
+					}
 				}
 				&#pipe-clay{
 					@include bgImg("../images/pipe-clay-ss.png");
 					height: 350px;
 					max-width: 400px; 	
 					background-size: contain;
-					opacity: .7;
-					@include transition(opacity 0.8s);
-					&:hover{
-	  				opacity: 1;
-	  				@include transition(opacity 0.8s);
-	  				}//hover
+					@include breakpoint($medium) {
+						@include transition(all 0.9s);
+						&:hover{
+		  				@include scale(1.1);
+		  				@include transition(all 0.9s);
+		  				}//hover
+					}
 				}
-			}//img
+			}//project image
 			.text-group{
 				@include span(6 of 12);
 				padding: 2em;
-				@include align-self(center);
+				@include align-self(flex-start);
 				h3{
 					font-size: 1.4em;
 					text-align: left;
@@ -82,6 +99,23 @@
 					line-height: 1.5em;
 					font-size: 1.1em;
 				}//p
+				.seperator{
+					display: none;
+					@include breakpoint($medium) {
+						display: block;
+						margin: 14rem 0 5rem 0;
+						width: 100%;
+						height: 1px;
+						background-color: rgba($darkBlue, .7);
+
+						&.right{
+							@include rotate(-15deg);
+						}
+						&.left{
+							@include rotate(15deg);
+						}
+					}
+				}
 			}//text-group
 			@include breakpoint ($small 0) {
 				@include display-flex(flex);

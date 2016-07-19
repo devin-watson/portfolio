@@ -1,3 +1,9 @@
+$(function() {
+    Pace.on("hide", function(){
+        $(".wrapper").fadeIn(1000);
+    });
+});
+
 $(function(){
 
   "use strict";
@@ -29,7 +35,6 @@ $(function(){
       $landscape.css("display", "block");
       $pageIntro.css("padding-top", "55px");
       $sidebar.css("display", "none");
-
     } else {
       $toggleButton.css("display", "block");
       $toggleX.css("display", "block");

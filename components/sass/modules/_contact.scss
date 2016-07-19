@@ -16,6 +16,10 @@
 	border-top: 1px dashed rgba($opt-beige, .9);
 	padding: 5% 0;
 	.contact-intro{
+		@include display-flex();
+		@include flex-direction(column);
+		@include align-items(center);	
+		@include justify-content(center);
 		padding: 10% 3%;
 		// border: 2px solid $orange;
 		@include breakpoint($medium) {
@@ -44,6 +48,31 @@
 			color: $opt-beige;
 			img{
 				width: 1.7em;
+				padding-right: 20px;
+			}
+		}
+		a{
+			margin-top: 70px;
+			padding: 8px 12px;
+			border-right: 2px solid $opt-beige;
+			border-left: 2px solid $opt-beige;
+			text-decoration: none;
+			font-family: $bodyFont;
+			font-size: 1.2em;
+			color: $opt-beige;
+			@include transition(all .8s);
+			border-bottom: 2px solid transparent;
+			&:hover{
+				border-bottom: 2px solid red;
+				border-right: 2px solid transparent;
+				border-left: 2px solid transparent;
+
+				@include scale(1.1);
+				@include transition(all .8s);
+			}
+			img{
+				width: 1.7em;
+				padding-right: 20px;
 			}
 		}
 	}//contact-intro

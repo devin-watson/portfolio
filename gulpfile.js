@@ -27,7 +27,6 @@ if (env==='development') {
 
 jsSources = [
   'components/scripts/jqloader.js',
-  'components/scripts/jquery.scrollmagic.min.js',
   'components/scripts/script.js'
 ];
 
