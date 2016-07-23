@@ -80,12 +80,11 @@
     }//breakpoint
   .social{
   	list-style: none;
-  	display: table;
   	margin-left: 30px;
   	position: fixed;
   	bottom: 40px;
     	li{
-  		display: table-cell;
+      display: inline-block;
   		padding: 0 20px;
   		cursor: pointer;
       text-align: center;

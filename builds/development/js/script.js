@@ -24,60 +24,50 @@ $(function(){
     var $wHeight = $(window).height();
     var $toggleButton = $(".toggle");
     var $toggleX = $(".toggleX");
-    var $sideSocial = $(".sidebar .social");
-    var $social = $("#entrance .social");
+    var $sideSocial = $("#sidebar-social li img");
+    var $social = $("#social-nav li img");
     var $landscape = $(".landscape");
-    var $pageIntro = $("#entrance");
     var $sidebar = $(".sidebar");
 
-    if($wHeight < 450) {
+    if($wHeight < 600) {
       $toggleButton.css("display", "none");
       $toggleX.css("display", "none");
-      $sideSocial.css("display", "none");
-      $social.css("display", "none");
       $landscape.css("display", "block");
-      $pageIntro.css("padding-top", "55px");
+      $social.css("visibility", "hidden");
       $sidebar.css("display", "none");
+      $sideSocial.css("visibility", "hidden");
     } else {
       $toggleButton.css("display", "block");
       $toggleX.css("display", "block");
-      $sideSocial.css("display", "table");
-      $social.css("display", "table-cell");
+      $social.css("visibility", "visible");
+      $sideSocial.css("visibility", "visible");
       $landscape.css("display", "none");
-      $pageIntro.css("padding-top", "0");
       $sidebar.css("display", "block");
-
-      
-
     }//else
 
     $(window).resize(function(){
       var $wHeight = $(window).height();
       var $toggleButton = $(".toggle");
       var $toggleX = $(".toggleX");
-      var $social = $("#entrance .social");
+      var $sideSocial = $("#sidebar-social li img");
+      var $social = $("#social-nav li img");
       var $landscape = $(".landscape");
-      var $pageIntro = $("#entrance");
       var $sidebar = $(".sidebar");
 
-      if($wHeight < 450) {
-      $toggleButton.css("display", "none");
-      $toggleX.css("display", "none");
-      $sideSocial.css("display", "none");
-      $social.css("display", "none");
-      $landscape.css("display", "block");
-      $pageIntro.css("padding-top", "55px");
-      $sidebar.css("display", "none");
-
-    } else {
-      $toggleButton.css("display", "block");
-      $toggleX.css("display", "block");
-      $sideSocial.css("display", "table");
-      $social.css("display", "table-cell");
-      $landscape.css("display", "none");
-      $pageIntro.css("padding-top", "0");
-      $sidebar.css("display", "block");
-
+      if($wHeight < 600) {
+        $toggleButton.css("display", "none");
+        $toggleX.css("display", "none");
+        $landscape.css("display", "block");
+        $social.css("visibility", "hidden");
+        $sidebar.css("display", "none");
+        $sideSocial.css("visibility", "hidden");
+      } else {
+        $toggleButton.css("display", "block");
+        $toggleX.css("display", "block");
+        $social.css("visibility", "visible");
+        $sideSocial.css("visibility", "visible");
+        $landscape.css("display", "none");
+        $sidebar.css("display", "block");
       }//else
     }); //landscape navigation
     
