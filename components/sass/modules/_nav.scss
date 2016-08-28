@@ -45,7 +45,7 @@
             opacity: 1;
             width: 100%;
             color: $navColor;
-            font-family: $navFont;
+            font-family: $intro-font;
             font-size: 1.4em;
             line-height: 1.2em;
             text-decoration: none;
@@ -125,7 +125,7 @@
 	.toggleX{
 		visibility: visible;
 		opacity: 1;
-    font-family: $bodyFont;
+    font-family: $intro-font;
 		text-decoration: none;
 		font-size: 2em;
 		color: $xColor;
@@ -169,7 +169,7 @@
       padding-top: 10px;
         a{
         text-decoration: none;
-        font-family: $navFont;
+        font-family: $intro-font;
         font-size: 1em;
         color: $navColor;
       }//a

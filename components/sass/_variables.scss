@@ -1,6 +1,5 @@
 //Fonts
-@import 'https://fonts.googleapis.com/css?family=Lato:300,700|Raleway:300,600|Roboto:300,500';
-
+@import 'https://fonts.googleapis.com/css?family=Bungee|Raleway:300,600|Roboto:300,500';
 $susy: (
   columns: 12,
   container: 60em,
@@ -10,7 +9,8 @@ $susy: (
 
 $headFont: Roboto, "Helvetica Neue", Helvetica, sans-serif;
 $bodyFont: "Raleway", "Helvetica Neue", Helvetica, sans-serif;
-$navFont: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+$intro-font: "Bungee", Helvetica, sans-serif;
+
 
 //Colors
 
@@ -38,7 +38,6 @@ $linkBgHover: $opt-darkBlue;
 $linkHover: $opt-blue;
 $xColor: $black;
 $xHover: $opt-blue;
-
 
 $tiny: 500px;
 $small: 800px;
